@@ -28,5 +28,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-/.env
-/typed-router.d.ts
+
+typed-router.d.ts

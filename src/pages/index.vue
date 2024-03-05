@@ -1,5 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FormSvg from './FormSvg.vue';
+</script>
 
 <template>
-  <main>Cours sur l'importation et affichage de données depuis un json, et depuis supabase</main>
+  <main>bonjour de home</main>
+  <FormSvg/>
 </template>
