@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FormSvg from './FormSvg.vue';
+import FormSvg from '@/components/FormSvg.vue';
 </script>
 
 <template>
