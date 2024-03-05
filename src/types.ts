@@ -8,3 +8,4 @@ export interface ChaussureSvg {
   lacet?: string;
   trimestre?: string;
 }
+
