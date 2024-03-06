@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BasketProfil from '../components/BasketProfil.vue'
+import AfficheBasket from '../components/AfficheBasket.vue'
 import type { ChaussureSvg } from '../types'
 const exemples: ChaussureSvg[] = [
   {
@@ -39,6 +40,9 @@ const exemples: ChaussureSvg[] = [
           <BasketProfil class="w-64" v-bind="exemple"  />
         </RouterLink>
       </div>
+    </div>
+    <div>
+      <AfficheBasket :max="1" />
     </div>
   </section>
 </template>

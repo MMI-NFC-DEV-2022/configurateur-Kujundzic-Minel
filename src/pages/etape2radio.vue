@@ -7,6 +7,8 @@ import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 import formKitListColors from '@/components/formKitListColors.vue'
 import { supabase } from '@/supabase'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const props = defineProps<{
   data?: ChaussureSvg;
   id?: string
@@ -18,6 +20,8 @@ async function upsertBasket(){
     .upsert(basket.value)
   if (error) {
     console.error('error', error)
+  } else {
+    router.push( '/' )
   }
 
 }
