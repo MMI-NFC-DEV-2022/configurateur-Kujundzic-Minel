@@ -6,6 +6,7 @@ import Index from 'src/pages/index.vue'
 import etape2select from 'src/pages/etape2select.vue'
 import etape2radio from 'src/pages/etape2radio.vue'
 import FormImage from 'src/pages/formimage.vue'
+import loginLogout from './components/login-logout.vue'
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import FormImage from 'src/pages/formimage.vue'
     <RouterLink to="/etape2select">Etape2select</RouterLink>
     <RouterLink to="/etape2radio">Etape2radio</RouterLink>
     <RouterLink to="/formimage">FormImage</RouterLink>
+    <loginLogout />
   </header>
 
   <Suspense>

@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import BasketProfil from '../components/BasketProfil.vue'
 import AfficheBasket from '../components/AfficheBasket.vue'
+import AfficheBasketUser from '@/components/AfficheBasketUser.vue';
 import type { ChaussureSvg } from '../types'
+import { supabase } from '@/supabase';
+const { data: { user } } = await supabase.auth.getUser()
 const exemples: ChaussureSvg[] = [
   {
     semelle: '#FF0000',
@@ -41,7 +44,10 @@ const exemples: ChaussureSvg[] = [
         </RouterLink>
       </div>
     </div>
-    <div>
+    <div v-if="user">
+      <AfficheBasketUser/>
+    </div>
+    <div v-else>
       <AfficheBasket :max="1" />
     </div>
   </section>
