@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import FormSvg from "../../../components/FormBasket.vue";
+import formEditBasket from "@/components/formEditBasket.vue";
 import {useRoute} from "vue-router/auto"
 const route=useRoute("/basket/exemple/[data]")
 </script>
 <template>
-  <FormSvg :data="JSON.parse(route.params.data)" />
+  <formEditBasket :data="JSON.parse(route.params.data)" />
 </template>

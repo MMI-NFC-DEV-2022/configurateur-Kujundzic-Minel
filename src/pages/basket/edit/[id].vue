@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import FormSvg from "../../../components/FormSvg.vue";
+import formEditBasket from "../../../components/formEditBasket.vue";
 defineProps<{
   id: string;
 }>();
 </script>
 <template>
-  <FormSvg :id="id" />
+  <formEditBasket :id="id" />
 </template>
