@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import type { ChaussureSvg } from '@/types'
 import { colors } from '@/types'
+import { materiaux } from '@/types'
 import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 
@@ -94,6 +95,25 @@ const basket = ref<ChaussureSvg>(props.data ?? {})
     </div>
 
     <FormKit type="form" v-model="basket">
+      <FormKit
+        name="materiaux"
+        label="Materiaux de la paire en global"
+        value="#ffffff"
+        type="radio"
+        :options="materiaux"
+        :sections-schema="{
+          inner: { $el: null },
+          decorator: { $el: null }
+        }"
+        input-class="peer sr-only"
+        options-class="flex gap-1"
+      >
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600" :style="{ backgroundImage: 
+          `url(${context.option.value})` }" />
+          <span class="sr-only">{{ context.option.label }} </span>
+        </template>
+      </FormKit>
       <FormKit
         name="semelle"
         label="semelle"
@@ -261,4 +281,5 @@ const basket = ref<ChaussureSvg>(props.data ?? {})
       </FormKit>
     </FormKit>
   </div>
+
 </template>
