@@ -4,6 +4,7 @@ import type { ChaussureSvg } from '@/types'
 import { colors } from '@/types'
 import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
+import formKitListColors from './formKitListColors.vue'
 
 const props = defineProps<{
   data?: ChaussureSvg
