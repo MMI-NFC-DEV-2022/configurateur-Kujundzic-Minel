@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import FormSvg from '@/components/FormSvg.vue';
-import FormImage from '@/components/FormImage.vue';
-import FormBasket from '@/components/FormBasket.vue';
 </script>
 
 <template>
-  <main class="text-6xl">bonjour de home</main>
+  <main class="text-6xl">Début du tp, personnalisation 1</main>
   <FormSvg/>
-  <p class="text-6xl">Suite du TP (Carousel)</p>
-  <FormImage/>
-  <p class="text-6xl">Suite du TP (Basket etape2)</p>
-  <FormBasket/>
 </template>
