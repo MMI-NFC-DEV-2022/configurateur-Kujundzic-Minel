@@ -35,7 +35,13 @@ const chaussure = ref<ChaussureSvg>({})
       <FormKit name="bande" label="bande" value="#ffffff" type="color"></FormKit>
       <FormKit name="languette" label="languette" value="#ffffff" type="color"></FormKit>
       <FormKit name="lacet" label="lacet" value="#ffffff" type="color"></FormKit>
-      <FormKit name="trimestre" label="trimestre" value="#ffffff" type="color"></FormKit>
+      <FormKit 
+      name="trimestre" 
+      label="trimestre" 
+      value="#ffffff" 
+      type="color"
+      >
+    </FormKit>
     </FormKit>
   </div>
 </template>

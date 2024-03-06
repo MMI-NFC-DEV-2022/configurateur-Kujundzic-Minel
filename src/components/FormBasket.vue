@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { ChaussureSvg } from '@/types'
+import { colors } from '@/types'
 import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 
 const props = defineProps<{
-  data?: Basket;
+  data?: ChaussureSvg;
   id?: string;
 }>();
 
-const basket = ref<Basket>(props.data ?? {});
+const basket = ref<ChaussureSvg>(props.data ?? {});
 </script>
 
 <template>
@@ -28,14 +29,14 @@ const basket = ref<Basket>(props.data ?? {});
     </div>
 
     <FormKit type="form" v-model="basket">
-      <FormKit name="semelle" label="semelle" value="#ffffff" type="color"></FormKit>
-      <FormKit name="empeigne" label="empeigne" value="#ffffff" type="color"></FormKit>
-      <FormKit name="pointe" label="pointe" value="#ffffff" type="color"></FormKit>
-      <FormKit name="oeillet" label="oeillet" value="#ffffff" type="color"></FormKit>
-      <FormKit name="bande" label="bande" value="#ffffff" type="color"></FormKit>
-      <FormKit name="languette" label="languette" value="#ffffff" type="color"></FormKit>
-      <FormKit name="lacet" label="lacet" value="#ffffff" type="color"></FormKit>
-      <FormKit name="trimestre" label="trimestre" value="#ffffff" type="color"></FormKit>
+      <FormKit name="semelle" label="semelle" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="empeigne" label="empeigne" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="pointe" label="pointe" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="oeillet" label="oeillet" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="bande" label="bande" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="languette" label="languette" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="lacet" label="lacet" value="#ffffff" type="select" :options="colors"></FormKit>
+      <FormKit name="trimestre" label="trimestre" value="#ffffff" type="select" :options="colors"></FormKit>
     </FormKit>
     </div>
 </template>
