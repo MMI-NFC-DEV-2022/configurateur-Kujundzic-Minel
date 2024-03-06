@@ -28,7 +28,6 @@ withDefaults(defineProps<ChaussureImage>(), {
     <img
       :src="`/images/${orientation}/mousse-${mousse}.png`"
       class="absolute top-0 left-0 h-auto w-full"
-      v-if="orientation !== 'derriere'"
     />
   </div>
 </template>

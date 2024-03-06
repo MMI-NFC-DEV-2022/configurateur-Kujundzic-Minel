@@ -78,7 +78,4 @@ const basket = ref<ChaussureSvg>(props.data ?? {})
       ></FormKit>
     </FormKit>
   </div>
-
-
-
 </template>
