@@ -6,11 +6,21 @@ import { materiaux } from '@/types'
 import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 import formKitListColors from '@/components/formKitListColors.vue'
+import { supabase } from '@/supabase'
 const props = defineProps<{
   data?: ChaussureSvg;
   id?: string
 }>()
 const basket = ref<ChaussureSvg>(props.data ?? {})
+async function upsertBasket(){
+  const { data, error } = await supabase
+    .from('chaussureSvg')
+    .upsert(basket.value)
+  if (error) {
+    console.error('error', error)
+  }
+
+}
 </script>
 <template>
   <h1 class="3xl font-bold">AFFICHAGE AVEC RADIO</h1>
@@ -31,6 +41,7 @@ const basket = ref<ChaussureSvg>(props.data ?? {})
     <FormKit
       type="form"
       v-model="basket"
+      @submit="upsertBasket"
       :config="{
         classes: {
           input: 'p-1 rounded border-gray-300 shadow-sm border',
